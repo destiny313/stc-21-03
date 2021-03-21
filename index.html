@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Продажа билетов в кино в Иннополисе</title>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
@@ -140,46 +141,65 @@
                 dolore magna aliqua. Ut enim ad minim veniam.</p>
         </div>
     </section>
-    <section>
-        <h2 id="chooseFilm">Выберите фильм</h2>
-        <!-- Таблица с сеансами -->
-        <table border="1" cellpadding="5" cellspacing="3">
-            <thead>
-                <th>Начало сеанса</th>
-                <th>Название фильма</th>
-                <th>Жанр</th>
-            </thead>
-            <tr>
-                <td>10:00</td>
-                <td><a href="https://www.kinopoisk.ru/film/838" target="_blank"
-                        title="Человек-паук на КиноПоиске">Человек-паук</a></td>
-                <td>Фантастика, боевик, приключения</td>
-            </tr>
-            <tr>
-                <td>12:00</td>
-                <td><a href="https://www.kinopoisk.ru/film/1122114" target="_blank"
-                        title="Собачья жизнь-2 на КиноПоиске">Собачья жизнь 2</a></td>
-                <td>Фэнтэзи, драма, комедия</td>
-            </tr>
-            <tr>
-                <td>14:00</td>
-                <td><a href="https://www.kinopoisk.ru/film/846824" target="_blank"
-                        title="История игрушек-4 на КиноПоиске">История игрушек 4</a></td>
-                <td>Мультфильм, фэнтэзи, комедия</td>
-            </tr>
-            <tr>
-                <td>16:00</td>
-                <td><a href="https://www.kinopoisk.ru/film/693730" target="_blank"
-                        title="Люди в чёрном: Интэрнэшнл на КиноПоиске">Люди в чёрном: Интэрнэшнл</a></td>
-                <td>Фантастика, боевик, комедия</td>
-            </tr>
+    <section id="chooseFilm">
+        <div  class="chooseFilm">
+            <h2>Выберите фильм</h2>
+            <!-- Таблица с сеансами -->
+            <table class="chooseFilm__table">
+                <thead>
+                    <th></th>
+                    <th>
+                        <a href="#" class="chooseFilm__link">Начало сеанса</a>
+                        <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.49182 0.5L8.49182 5H0.491821L4.49182 0.5Z" fill="white"/>
+                            </svg>                                            
+                    </th>
+                    <th>
+                        <a href="#" class="chooseFilm__link">Название фильма</a>
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4.5L8 0H0L4 4.5Z" fill="white"/>
+                            </svg>                        
+                    </th>
+                    <th>
+                        <a href="#" class="chooseFilm__link">Жанр</a>
+                    </th>
+                </thead>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>10:00</td>
+                    <td><a href="https://www.kinopoisk.ru/film/838" target="_blank"
+                            title="Человек-паук на КиноПоиске">Человек-паук</a></td>
+                    <td>Фантастика, боевик, приключения</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>12:00</td>
+                    <td><a href="https://www.kinopoisk.ru/film/1122114" target="_blank"
+                            title="Собачья жизнь-2 на КиноПоиске">Собачья жизнь 2</a></td>
+                    <td>Фэнтэзи, драма, комедия</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>14:00</td>
+                    <td><a href="https://www.kinopoisk.ru/film/846824" target="_blank"
+                            title="История игрушек-4 на КиноПоиске">История игрушек 4</a></td>
+                    <td>Мультфильм, фэнтэзи, комедия</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>16:00</td>
+                    <td><a href="https://www.kinopoisk.ru/film/693730" target="_blank"
+                            title="Люди в чёрном: Интэрнэшнл на КиноПоиске">Люди в чёрном: Интэрнэшнл</a></td>
+                    <td>Фантастика, боевик, комедия</td>
+                </tr>
 
 
-        </table>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam.
-        </p>
+            </table>
+            <div class="chooseFilm__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam.
+            </div>
+        </div>
     </section>
     <section>
         <img src="/images/gift.png" alt="Подарок">

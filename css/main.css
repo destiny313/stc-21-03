@@ -1,0 +1,67 @@
+.chooseFilm {
+    font-family: 'IBM Plex Sans', sans-serif;    
+    width: 850px;
+    margin: 0 auto;
+}
+.chooseFilm__table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 850px;
+}
+
+.chooseFilm__table th {
+    background: #A3CC40;    
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.chooseFilm__link {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #fff;
+}
+
+.chooseFilm__link svg {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 11px;
+}
+
+.chooseFilm__table td {
+    background: #4C4D4F;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 14px;
+    height: 25px;
+}
+
+.chooseFilm__table tr:nth-child(2n+1) td {
+    background: #373737;
+}
+
+.chooseFilm__table a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.chooseFilm h2 {
+    color: #A3CC40;    
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.3;
+    padding-bottom: 40px;
+}
+
+.chooseFilm__text {
+    text-align: center;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 1.3;
+    color: #333333;
+    padding-top: 28px;
+    width: 540px;
+    margin: 0 auto;
+}
