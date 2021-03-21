@@ -73,22 +73,24 @@
         </a>
 
         <div>
-            <span>+7 (800) 355 12-56</span>
+            <a href="tel:78003551256">+7 (800) 355 12-56</a>
             <a href="mailto:kino@innopolis.ru" title="Написать письмо">kino@innopolis.ru</a>
             <span>ул.Спортивная д.1</span>
             <a href="#">Заказать звонок</a>
             <span>RU</span> <!-- Нужно ли? -->
         </div>
         <nav>
-            <a href="#">EVENT DETAILS</a>
-            <a href="#">SPEAKERS</a>
-            <a href="#">SPONSORS</a>
-            <a href="#">PAST EVENTS</a>
-            <a href="#">CONTACT</a>
+            <ul>
+                <li><a href="#why">EVENT DETAILS</a></li>
+                <li><a href="#chooseFilm">SPEAKERS</a></li>
+                <li><a href="#films">SPONSORS</a></li>
+                <li><a href="#goods">PAST EVENTS</a></li>
+                <li><a href="#response">CONTACT</a></li>
+            </ul>
         </nav>
     </header>
     <div>
-        <span>Закажите билет в кино</span>
+        <h1>Закажите билет в кино</h1>
         <span>Всем покупателям подарок!</span>
     </div>
     <div>
@@ -99,7 +101,7 @@
             Excepteur sint occaecat cupidatat non proident, sunt.</p>
     </div>
     <section>
-        <b>Почему мы?</b>
+        <h2 id="why">Почему мы?</h2>
         <div>
             <img src="/images/large_screens.png" alt="Большие экраны">
             <b>Большие экраны</b>
@@ -139,19 +141,41 @@
         </div>
     </section>
     <section>
-        <b>Выберите фильм</b>
+        <h2 id="chooseFilm">Выберите фильм</h2>
         <!-- Таблица с сеансами -->
-        <p>Начало сеанса Название фильма Жанр<br>
-            10:00 <a href="https://www.kinopoisk.ru/film/838" target="_blank"
-                title="Человек-паук на КиноПоиске">Человек-паук</a> Фантастика, боевик, приключения<br>
-            12:00 <a href="https://www.kinopoisk.ru/film/1122114" target="_blank"
-                title="Собачья жизнь-2 на КиноПоиске">Собачья жизнь 2</a> Фэнтэзи, драма, комедия<br>
-            14:00 <a href="https://www.kinopoisk.ru/film/846824" target="_blank"
-                title="История игрушек-4 на КиноПоиске">История игрушек 4</a> Мультфильм, фэнтэзи, комедия<br>
-            16:00 <a href="https://www.kinopoisk.ru/film/693730" target="_blank"
-                title="Люди в чёрном: Интэрнэшнл на КиноПоиске">Люди в чёрном: Интэрнэшнл</a> Фантастика, боевик,
-            комедия
-        </p>
+        <table border="1" cellpadding="5" cellspacing="3">
+            <thead>
+                <th>Начало сеанса</th>
+                <th>Название фильма</th>
+                <th>Жанр</th>
+            </thead>
+            <tr>
+                <td>10:00</td>
+                <td><a href="https://www.kinopoisk.ru/film/838" target="_blank"
+                        title="Человек-паук на КиноПоиске">Человек-паук</a></td>
+                <td>Фантастика, боевик, приключения</td>
+            </tr>
+            <tr>
+                <td>12:00</td>
+                <td><a href="https://www.kinopoisk.ru/film/1122114" target="_blank"
+                        title="Собачья жизнь-2 на КиноПоиске">Собачья жизнь 2</a></td>
+                <td>Фэнтэзи, драма, комедия</td>
+            </tr>
+            <tr>
+                <td>14:00</td>
+                <td><a href="https://www.kinopoisk.ru/film/846824" target="_blank"
+                        title="История игрушек-4 на КиноПоиске">История игрушек 4</a></td>
+                <td>Мультфильм, фэнтэзи, комедия</td>
+            </tr>
+            <tr>
+                <td>16:00</td>
+                <td><a href="https://www.kinopoisk.ru/film/693730" target="_blank"
+                        title="Люди в чёрном: Интэрнэшнл на КиноПоиске">Люди в чёрном: Интэрнэшнл</a></td>
+                <td>Фантастика, боевик, комедия</td>
+            </tr>
+
+
+        </table>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam.
@@ -159,7 +183,7 @@
     </section>
     <section>
         <img src="/images/gift.png" alt="Подарок">
-        <b>Подарок каждому!</b>
+        <b id="giftForAll">Подарок каждому!</b>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non
@@ -179,14 +203,14 @@
         <span>Получить подарок</span>
     </section>
     <section>
-        <b>Фильмы</b>
+        <h2 id="films">Фильмы</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non
             quam.</p>
         <!-- Мозаика фильмов -->
     </section>
     <section>
-        <b>Товары</b>
+        <h2 id="goods">Товары</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non
             quam.</p>
@@ -204,7 +228,7 @@
         </div>
     </section>
     <section>
-        <b>Отзывы</b>
+        <h2 id="response">Отзывы</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non
             quam.</p>
@@ -218,9 +242,46 @@
     </section>
     <section>
         <img src="/images/feedback.png" alt="Обратная связь">
-        <b>Обратная связь</b>
+        <h2>Обратная связь</h2>
         <!-- форма обратной связи -->
-        <span>послать</span>
+        <form name="order" action="/order.php" enctype="multipart/form-data">
+            <div>
+                <input type="text" name="userName" aria-label="Полное имя" placeholder="Полное имя" required>
+            </div>
+            <div>
+                <select name="seatNumber" size="1" aria-label="Номер места" placeholder="Номер места" multiple required>
+                    <option value="">Номер места</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div>
+                <textarea name="feedback" rows="5" aria-label="Напишите отзыв" placeholder="Напишите свой отзыв"></textarea>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" aria-label="Согласие на обработку персональных данных" name="agreement" required>
+                    Я согласен на обработку своих персональных данных
+                </label>
+            </div>
+            <div>
+                <input type="file" name="fileTicket">
+            </div>
+            <div>
+                <input type="email" name="userMail" aria-label="Адрес электронной почты" placeholder="E-mail">
+            </div>
+            <div>
+                <input type="submit" value="послать">
+            </div>
+        </form>        
     </section>
     <section>
         <!-- карта -->
@@ -324,15 +385,17 @@
         </div>
         <nav>
             <b>SITE</b>
-            <a href="#">EVENT DETAILS</a>
-            <a href="#">SPEAKERS</a>
-            <a href="#">SPONSORS</a>
-            <a href="#">PAST EVENTS</a>
-            <a href="#">CONTACT</a>
+            <ul>
+                <li><a href="#why">EVENT DETAILS</a></li>
+                <li><a href="#chooseFilm">SPEAKERS</a></li>
+                <li><a href="#films">SPONSORS</a></li>
+                <li><a href="#goods">PAST EVENTS</a></li>
+                <li><a href="#response">CONTACT</a></li>
+            </ul>
         </nav>
         <div>
             <b>CONTACT</b>
-            <span>+7 (800) 355 12-56</span>
+            <a href="tel:78003551256">+7 (800) 355 12-56</a>
             <a href="mailto:kino@innopolis.ru" title="Написать письмо">kino@innopolis.ru</a>
             <span>420500, г. Иннополис ул.Университетская, д.1</span>
             <a href="#">Как добраться</a>
