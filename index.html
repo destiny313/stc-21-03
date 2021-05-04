@@ -9,6 +9,13 @@
     <link rel="shortcut icon" href="./images/favicon1.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./libs/owl.carousel.min.css">
+    <link rel="stylesheet" href="./libs/owl.theme.default.min.css">
+    
+    
+    <script defer src="./libs/jquery-3.6.0.min.js"></script>
+    <script defer src="./libs/owl.carousel.min.js"></script>
+    <script defer src="./js/main.js"></script>
 </head>
 
 <body>
@@ -273,17 +280,44 @@
             <b>Постер “Мстители”</b>
         </div>
     </section>
-    <section>
-        <h2 class="greenHeader">Отзывы</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non
-            quam.</p>
-        <div>
-            <img src="./images/elenova_e.png" alt="Елена Еленова">
-            <b>Елена Еленова</b>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. </p>
-            <span>13.12.2020</span>
+    <section class="reviews">
+        <div class="reviews__shade">
+            <div class="reviews__content">
+                <h2 class="greenHeader">Отзывы</h2>
+                <p class="reviews__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non
+                    quam.</p>
+                <div class="reviews__people owl-carousel owl-theme">
+                    <div class="people__card">
+                        <img src="./images/elenova_e.png" alt="Елена Еленова">
+                        <b>Елена Еленова</b>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. </p>
+                        <div class="card__date">13.12.2020</div>
+                    </div>
+                    <div class="people__card">
+                        <img src="./images/borisov_b.png" alt="Борис Борисов">
+                        <b>Борис Борисов</b>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. </p>
+                        <div class="card__date">13.12.2020</div>
+                    </div>
+                    <div class="people__card">
+                        <img src="./images/dikaprio_l.png" alt="Леонардо ДиКаприо">
+                        <b>Леонардо ДиКаприо</b>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. </p>
+                        <div class="card__date">13.12.2020</div>                        
+                    </div>
+                    <div class="people__card">
+                        <img src="./images/reklamniy_ded.jpg" alt="Рекламный дед">
+                        <b>Рекламный дед</b>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. </p>
+                        <div class="card__date">13.12.2020</div>
+                    </div>
+                </div>    
+            </div>
         </div>
     </section>
     <section>

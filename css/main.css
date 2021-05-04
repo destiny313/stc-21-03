@@ -469,6 +469,141 @@ header:after {
 
 
 
+.reviews {
+    
+    position: relative; 
+    background-image: url(../images/clapper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 792px;
+    /* width: 1171px; */
+    /* margin: 0 auto; */
+    overflow: hidden;
+}
+
+.reviews__shade {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(22, 22, 22, 0.8);
+}
+
+.reviews__shade::before {
+    content: '';
+    display: block;
+    border-top: 80px solid transparent;
+    border-right: 100vw solid white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+
+.reviews__shade::after {    
+    content: '';
+    display: block;
+    border-bottom: 80px solid transparent;
+    border-left: 100vw solid white;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.reviews__content {    
+    max-width: 850px;
+    margin: 135px auto;
+}
+
+.reviews p {
+    font-family: 'IBM Plex Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 1.3;
+    color: #FFFFFF;
+}
+
+.reviews__description {
+    display: inline-block;
+    max-width: 550px;
+    margin-top: 30px;
+}
+
+.reviews__people {
+    margin-top: 75px;
+    width: 850px;
+    display: flex;
+    justify-content:space-between
+}
+
+.people__card {
+    position: relative;    
+    width: 210px;
+    height: 284px;
+    background: #97B13C;
+    border-radius: 9px;
+    color: #FFFFFF;
+    /* margin-left: 90px; */
+    overflow: hidden;
+}
+
+.people__card:hover {
+    transform: scale(1.16, 1.16);
+}
+
+.people__card img {
+    width: 100%;
+}
+
+.people__card b {
+    font-family: 'IBM Plex Sans SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.3;
+    display: block;
+    margin: 22px 10px;
+}
+
+.people__card p {    
+    font-size: 10px;
+    line-height: 1.3;
+    /* display: block; */
+    margin: -10px 10px;
+}
+
+.card__date {   
+    position: absolute;     
+    font-family: 'IBM Plex Sans Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 1.3;
+    right: 13px;
+    bottom: 10px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .map {
     margin: 0 auto;
     max-width: 973px;
