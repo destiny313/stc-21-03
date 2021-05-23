@@ -366,7 +366,7 @@ header:after {
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: space-between;
-    align-self: center;
+    /* align-self: center; */
 }
 
 .bait {
@@ -389,7 +389,7 @@ header:after {
 
 .bait__image {
     display: block;
-    width: 22vw;
+    width: 100%;
     height: 15vw;
     
 }
