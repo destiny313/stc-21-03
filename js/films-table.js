@@ -2,6 +2,7 @@ const films = [
     {
         start: '10:00',
         title: 'Человек-паук',
+        adult: false,
         link: 'https://www.kinopoisk.ru/film/838',
         genre: [
             {
@@ -16,7 +17,7 @@ const films = [
         ]
     },{
         start: '12:00',
-        title: 'Собачья жизнь 2',
+        title: 'Собачья жизнь 23',
         link: 'https://www.kinopoisk.ru/film/1122114',
         genre: [
             {
@@ -59,8 +60,48 @@ const films = [
                 name: 'комедия',    
             }
         ]
+    },{
+        start: '23:00',
+        title: 'XXX',
+        adult: true,
+        link: '"https://www.kinopoisk.ru/film/693730',
+        genre: [
+            {
+                name: 'XXX',    
+            }
+            
+        ]
     }
 ]
+
+const filmHelper = {
+    getId() {
+        return this.id || this.title.replaceAll(' ', '-');
+    },
+    getTitle() {
+        return this.title;
+    },
+    getStart() {
+        return this.start;
+    },
+    getGenre() {        
+        return this.genre.map(g => g.name).join(', ');
+    },
+    getLink() {
+        return this.link;
+    }
+}
+
+function renderFilmTableItem(film) {
+    return `<tr>
+    <td><input type="checkbox" name="" id="${filmHelper.getId.apply(film)}"></td>
+    <td>${filmHelper.getStart.apply(film)}</td>
+    <td><a href="${filmHelper.getLink.apply(film)}" target="_blank"
+            title="${filmHelper.getTitle.apply(film)}">${filmHelper.getTitle.apply(film)}
+        </a></td>
+    <td>${filmHelper.getGenre.apply(film)}</td>
+    </tr>`
+}
 
 const tableBody = document.getElementById('chooseFilm-table-body');
 tableBody.innerHTML = '';
@@ -68,13 +109,8 @@ tableBody.innerHTML = '';
 
 
 for (let index = 0; index < films.length; index++) {
-    tableBody.innerHTML += `<tr>
-        <td><input type="checkbox" name="" id=""></td>
-        <td>${films[index].start}</td>
-        <td><a href="${films[index].link}" target="_blank"
-                title="${films[index].title}">${films[index].title}
-            </a></td>
-        <td>${films[index].genre.map(g => g.name)}</td>
-        </tr>`;
+    if (!films[index].adult) {
+        tableBody.innerHTML += renderFilmTableItem(films[index]);
+    }
     
 }

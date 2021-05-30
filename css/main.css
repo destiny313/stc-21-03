@@ -687,11 +687,62 @@ header:after {
 
 .films-table {
     width: 100%;
+    margin-top: 65px;  
+
+    display: grid;
+    grid-template-areas: "grid-film1 grid-film2 grid-film3"
+                        "grid-film4 grid-film5 grid-film6"
+                        "grid-film7 grid-film8 grid-film9";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat (3, 1fr);    
+    align-items: stretch;
+}
+
+.grid-film1 {
+    grid-area: grid-film1;
+}
+
+.grid-film2 {
+    grid-area: grid-film2;
+}
+
+.grid-film3 {
+    grid-area: grid-film3;
+}
+
+.grid-film4 {
+    grid-area: grid-film4;
+}
+
+.grid-film5 {
+    grid-area: grid-film5;
+}
+
+.grid-film6 {
+    grid-area: grid-film6;
+}
+
+.grid-film7 {
+    grid-area: grid-film7;
+}
+
+.grid-film8 {
+    grid-area: grid-film8;
+}
+
+.grid-film9 {
+    grid-area: grid-film9;
+}
+
+
+/* .films-table {
+    width: 100%;
     margin-top: 65px;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-}
+} */
+
 /* .films table {
     margin-top: 65px;
     border: 0;
@@ -704,7 +755,7 @@ header:after {
 }    */
 
 .film-card {    
-    width: 33%;
+    /* width: 33%; */
     /* height: 100%; */
     position: relative;
     overflow: hidden;
