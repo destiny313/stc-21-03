@@ -667,6 +667,158 @@ header:after {
 
 
 
+
+
+.prizeShade {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.prizeWindow {
+    height: 50%;
+    width: 50%;
+    background: #FFFFFF;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
+}
+
+.prizeWindow__close {
+    display: block;
+    position: absolute;    
+    width: 35px;
+    height: 35px;
+    background: #A3CC40;
+    border-radius: 100%;    
+    top: 22px;
+    right: 22px;
+    box-sizing: border-box;    
+    
+}
+
+.prizeWindow__close:hover {
+    background: white;
+    border: 2px solid #A3CC40;
+    
+}
+
+.prizeWindow__close svg {
+    margin-top: 9px;
+    margin-left: 9px;
+    fill: white;
+}
+
+.prizeWindow__close:hover svg {
+    fill: #A3CC40;
+    margin-top: 7px;
+    margin-left: 7px;
+}
+
+.prizeWindow__userName{
+    position: absolute;
+    width: 80%;
+    height: 10%;
+    background: #DEDEDE;
+    border-radius: 5px;
+    top: 25%;
+    left: 10%;
+    border: none;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.prizeWindow__userEmail {
+    position: absolute;
+    width: 80%;
+    height: 10%;
+    background: #DEDEDE;
+    border-radius: 5px;
+    top: 40%;
+    left: 10%;
+    border: none;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.prizeWindow__selectPrize {
+    position: absolute;
+    width: 80%;
+    height: 10%;
+    background: #DEDEDE;
+    border-radius: 5px;
+    top: 55%;
+    left: 10%;
+    border: none;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+
+.prizeWindow__checkboxLabel {    
+    position: absolute;
+    top: 70%;
+    left: 10%;    
+    font-family: 'IBM Plex Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 1.3;
+    color: #333333;
+
+}
+
+.prizeWindow__input {
+    position: absolute;
+    width: 80%;
+    height: 10%;
+    background: #A3CC40;
+    border-radius: 6px;
+    top: 80%;
+    left: 10%;
+    border: none;
+
+    font-family: 'IBM Plex Sans Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3;        
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.prizeWindow__input:hover {
+    background: #FFFFFF;
+    color: #A3CC40;
+    border: 1px solid rgba(163, 204, 64, 0.62);
+    box-sizing: border-box;
+    box-shadow: 0px 2px 9px rgba(144, 210, 61, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .films {
     width: 76vw;
     margin: 45px auto;
@@ -686,7 +838,8 @@ header:after {
 }
 
 .films-table {
-    width: 100%;
+    width: 76vw;
+    /* height: 76vw; */
     margin-top: 65px;  
 
     display: grid;
@@ -698,9 +851,14 @@ header:after {
     align-items: stretch;
 }
 
+
+
 .grid-film1 {
     grid-area: grid-film1;
+    overflow: hidden;    
 }
+
+
 
 .grid-film2 {
     grid-area: grid-film2;
@@ -754,12 +912,16 @@ header:after {
     padding: 0;
 }    */
 
-.film-card {    
-    /* width: 33%; */
-    /* height: 100%; */
+.film-card {  
+    width: 25.3vw;
+    height: 25.3vw;  
+    /* width: 200px; 
+    height: 200px; */
+    /* height: 33%; */
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    
 }
 
 .film-card  img {
@@ -768,7 +930,10 @@ header:after {
     background-size: cover;    
     background-position: center; */
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    height: auto;
+    overflow: hidden;
+  
 }
 
 .film-card__shadow {
@@ -1120,7 +1285,7 @@ header:after {
     font-size: 15px;
     line-height: 1.3;
     color: #A1A1A1;
-    margin-left: 15px;;
+    margin-left: 15px;
 }
 
 .feedback select {

@@ -1,6 +1,6 @@
-const films = [
+const filmsData = [
     {
-        start: '10:00',
+        // start: '10:00',
         title: 'Человек-паук',
         adult: false,
         link: 'https://www.kinopoisk.ru/film/838',
@@ -16,7 +16,7 @@ const films = [
             }
         ]
     },{
-        start: '12:00',
+        // start: '12:00',
         title: 'Собачья жизнь 23',
         link: 'https://www.kinopoisk.ru/film/1122114',
         genre: [
@@ -31,7 +31,7 @@ const films = [
             }
         ]
     },{
-        start: '14:00',
+        // start: '14:00',
         title: 'История игрушек 4',
         link: 'https://www.kinopoisk.ru/film/846824',
         genre: [
@@ -46,7 +46,7 @@ const films = [
             }
         ]
     },{
-        start: '16:00',
+        // start: '16:00',
         title: 'Люди в чёрном: Интэрнэшнл',
         link: '"https://www.kinopoisk.ru/film/693730',
         genre: [
@@ -61,7 +61,7 @@ const films = [
             }
         ]
     },{
-        start: '23:00',
+        // start: '23:00',
         title: 'XXX',
         adult: true,
         link: '"https://www.kinopoisk.ru/film/693730',
@@ -108,9 +108,18 @@ tableBody.innerHTML = '';
 
 
 
-for (let index = 0; index < films.length; index++) {
-    if (!films[index].adult) {
-        tableBody.innerHTML += renderFilmTableItem(films[index]);
+// for (let index = 0; index < filmsData.length; index++) {
+//     if (!filmsData[index].adult) {
+//         tableBody.innerHTML += renderFilmTableItem(filmsData[index]);
+//     }
+    
+// }
+
+for (let index = 0; index < filmsData.length; index++) {
+    const film = new Film(filmsData[index]);  
+    // console.log(111);
+    if (film.isNotForAdult()) {
+        tableBody.innerHTML += film.renderFilmTableItem();
     }
     
 }

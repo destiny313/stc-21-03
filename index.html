@@ -15,8 +15,10 @@
 
     <script defer src="./libs/jquery-3.6.0.min.js"></script>
     <script defer src="./libs/owl.carousel.min.js"></script>
+    <script defer src="./js/film.js"></script>
     <script defer src="./js/main.js"></script>
     <script defer src="./js/films-table.js"></script>    
+    <script defer src="./js/blocks-films.js"></script> 
 </head>
 
 <body>
@@ -220,7 +222,7 @@
                     </th>
                 </thead>
                 <tbody id="chooseFilm-table-body">
-                    <tr>
+                    <!-- <tr>
                         <td><input type="checkbox" name="" id=""></td>
                         <td>10:00</td>
                         <td><a href="https://www.kinopoisk.ru/film/838" target="_blank"
@@ -249,7 +251,7 @@
                         <td><a href="https://www.kinopoisk.ru/film/693730" target="_blank"
                                 title="Люди в чёрном: Интэрнэшнл на КиноПоиске">Люди в чёрном: Интэрнэшнл</a></td>
                         <td>Фантастика, боевик, комедия</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
             <div class="chooseFilm__text">
@@ -301,7 +303,7 @@
             quam.</p>
         <!-- Мозаика фильмов -->
         
-        <div class="films-table">
+        <div class="films-table" id="films-table">
             
                     <div class="film-card grid-film1">
                         <img src="./images/films_Revenant.jpg" alt="">
@@ -351,7 +353,7 @@
                         </div>
                     </div>
             
-                    <!-- <div class="film-card grid-film5">
+                    <div class="film-card grid-film5">
                         <img src="./images/films_Kalashnikov.jpg" alt="">
                         <div class="film-card__shadow"></div>
                         <div class="film-card__description">
@@ -361,7 +363,7 @@
                                 quam elementum pulvinar etiam non quam. Ut pharetra sit amet aliquam id diam maecenas.
                             </p>
                         </div>
-                    </div> -->
+                    </div>
             
                     <div class="film-card grid-film6">
                         <img src="./images/films_Territory.jpg" alt="">
@@ -677,6 +679,41 @@
         </div>
         <p class="copyright">Copyright @ 2020 Innopolis University . All Rights Reserved.</p>
     </footer>
+    <div class="prizeShade">
+        <div class="prizeWindow">
+            <div class="prizeWindow__close">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.5363 1.82712L14.9176 0.208374L8.49997 6.62597L2.08237 0.208374L0.463623 1.82712L6.88122 8.24472L0.463623 14.6623L2.08237 16.2811L8.49997 9.86347L14.9176 16.2811L16.5363 14.6623L10.1187 8.24472L16.5363 1.82712Z"/>
+                    </svg>
+                    
+            </div>
+            <form name="order" action="/order.php" enctype="multipart/form-data">
+                <div>
+                    <input class="prizeWindow__userName" type="text" name="prizeUserName" aria-label="Введите имя" placeholder="Введите имя" required>
+                </div>
+                <div>
+                    <input class="prizeWindow__userEmail" type="email" name="prizeMail" aria-label="Введите email" placeholder="Введите email">
+                </div>
+                <div>
+                    <select class="prizeWindow__selectPrize" name="selectPrize" size="1" aria-label="Выберите подарок" placeholder="Выберите подарок" required>
+                        <option value="">Выберите подарок</option>
+                        <option value="prize1">Бесплатный 3-ий билет</option>
+                        <option value="prize2">Удвоим попкорн</option>
+                        <option value="prize3">Фирменная бейсболка</option>                        
+                    </select>
+                </div>                
+                <div>
+                    <label class="prizeWindow__checkboxLabel">
+                        <input type="checkbox" aria-label="Согласие на обработку персональных данных" name="agreement" required>
+                        Я согласен на обработку своих персональных данных
+                    </label>
+                </div>                
+                <div>
+                    <input class="prizeWindow__input" type="submit" value="Отправить">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
