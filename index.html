@@ -11,14 +11,17 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./libs/owl.carousel.min.css">
     <link rel="stylesheet" href="./libs/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css">
 
 
     <script defer src="./libs/jquery-3.6.0.min.js"></script>
     <script defer src="./libs/owl.carousel.min.js"></script>
+    <script defer src="./libs/fancybox/jquery.fancybox.min.js"></script>
     <script defer src="./js/film.js"></script>
     <script defer src="./js/main.js"></script>
     <script defer src="./js/films-table.js"></script>    
-    <script defer src="./js/blocks-films.js"></script> 
+    <script defer src="./js/blocks-films.js"></script>
+    <script defer src="./js/city.js"></script>
 </head>
 
 <body>
@@ -94,7 +97,11 @@
                         <a class="link-white link-underline" href="mailto:kino@innopolis.ru"
                             title="Написать письмо">kino@innopolis.ru</a>
                     </div>
-                    <span class="menuRow1__address">ул.Спортивная д.1</span>
+                    <span class="menuRow1__address">
+                        <a href="#" id="city-link" data-fancybox data-src="#cityModal"></a>
+                        ул.Спортивная д.1
+                        <span id="city-price"></span>
+                    </span>
                     <div class="menuRow1__call">
                         <a href="#"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -222,36 +229,6 @@
                     </th>
                 </thead>
                 <tbody id="chooseFilm-table-body">
-                    <!-- <tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td>10:00</td>
-                        <td><a href="https://www.kinopoisk.ru/film/838" target="_blank"
-                                title="Человек-паук на КиноПоиске">Человек-паукЧеловек-паукЧеловек-паукЧеловек-паукЧеловек-паукЧеловек-паукЧеловек-паукЧеловек-паукЧеловек-паук
-                                Человек-паукЧеловек-паукЧеловек-паукЧеловек-паукЧеловек-паукЧеловек-паукЧеловек-паукЧеловек-паукЧеловек-паукЧеловек-паукЧеловек-паукЧеловек-паук
-                            </a></td>
-                        <td>Фантастика, боевик, приключения</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td>12:00</td>
-                        <td><a href="https://www.kinopoisk.ru/film/1122114" target="_blank"
-                                title="Собачья жизнь-2 на КиноПоиске">Собачья жизнь 2</a></td>
-                        <td>Фэнтэзи, драма, комедия</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td>14:00</td>
-                        <td><a href="https://www.kinopoisk.ru/film/846824" target="_blank"
-                                title="История игрушек-4 на КиноПоиске">История игрушек 4</a></td>
-                        <td>Мультфильм, фэнтэзи, комедия</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td>16:00</td>
-                        <td><a href="https://www.kinopoisk.ru/film/693730" target="_blank"
-                                title="Люди в чёрном: Интэрнэшнл на КиноПоиске">Люди в чёрном: Интэрнэшнл</a></td>
-                        <td>Фантастика, боевик, комедия</td>
-                    </tr> -->
                 </tbody>
             </table>
             <div class="chooseFilm__text">
@@ -713,6 +690,11 @@
                 </div>
             </form>
         </div>
+    </div>
+    <div id="cityModal">
+        <p>Введите название города:</p>
+        <input type="text" id="city_input">
+        <div id="search_result"></div>
     </div>
 </body>
 
