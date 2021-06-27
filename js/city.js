@@ -4,25 +4,6 @@ GLAVPUNKT_PRICE_URL = 'https://glavpunkt.ru/api/get_tarif';
 let selectedCity, cities;
 
 function getRequest(url, callback) {
-    // let xhr = new XMLHttpRequest();
-    
-    // xhr.open('GET', url);
-    
-    // xhr.send();
-    
-    
-    // xhr.onreadystatechange = function() {
-    //     if (xhr.status != 200) { 
-    //         console.log(4);           
-    //         // return xhr.statusText;
-    //         return false;
-    //     }
-    //     if (xhr.readyState == 4) { 
-    //         console.log(5);                   
-    //         callback.call(xhr.responseText);
-    //     }
-        
-    // }
     $.get(url,'',function(data){
           console.log(data);          
           callback.call(data);
@@ -40,8 +21,7 @@ function getRequest(url, callback) {
 }
 
 function setCity() {
-    console.log('this: ',this);   
-    // let res = $.parseJSON(this);     
+    console.log('this: ',this);          
     selectedCity = this.city.name_ru;
     console.log(selectedCity);
     $('#city-link').html(selectedCity + ', ');    
@@ -65,20 +45,7 @@ function setPrice() {
     }
 }
 
-// function setCity() {
-//     console.log('this: ',this);   
-//     let res = $.parseJSON(this);     
-//     selectedCity = res.city.name_ru;
-//     console.log(selectedCity);
-//     $('#city-link').html(selectedCity + ', ');    
-//     getPrice(selectedCity);
-// }
 
-// function setCities() {
-//     cities = $.parseJSON(this);
-//     console.log($.parseJSON(this));
-//     getCityList();
-// }
 
 function getPrice(targetCity) {
     let price_url = GLAVPUNKT_PRICE_URL + '?serv=курьерская%20доставка&cityFrom=Санкт-Петербург&cityTo=' + targetCity + '&weight=1&price=500';
@@ -86,16 +53,6 @@ function getPrice(targetCity) {
 
 }
 
-// function setPrice() {
-//     console.log($.parseJSON(this).tarif)
-//     let tarif = $.parseJSON(this).tarif;
-//     if (tarif) {
-//         $('#city-price').html(', ' + tarif + 'р.');
-//     }
-//     else {
-//         $('#city-price').html(', нет доставки.');
-//     }
-// }
 
 function getCityList() {
     let html = '<ul>',
@@ -114,10 +71,7 @@ function getCityList() {
 
 jQuery(document).ready(($) => {
     let city = getRequest(SYPEX_URL, setCity);
-    // $.fancybox.open({
-	// 	src: '#cityModal',
-	// 	type: 'inline'
-	// }); 
+
     $(document).on('keyup', '#city_input', function(){        
         let val = $(this).val();
 
@@ -140,16 +94,6 @@ jQuery(document).ready(($) => {
 
 
 
-    // $("#cityModal").on("click", "li", function(){
-    //     let val = $(this);
-    //     let index=$('li').val(this);
-    //     console.log('clicked', val);
-    //     console.log('clicked', index);
-    // });
-    // $("#cityModal li").click(function () {
-    //     var index=$('#cityModal li').index(this);
-    //     console.log(index);
-    //     return false;
-    // });
+
     
 })
