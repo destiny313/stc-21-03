@@ -5,11 +5,11 @@ let selectedCity, cities;
 
 function getRequest(url, callback) {
     $.get(url,'',function(data){
-          console.log(data);          
+        //   console.log(data);          
           callback.call(data);
             },
       ).fail(function(){
-          console.log('error');
+        //   console.log('error');
           $.fancybox.open({
 		    src: '#cityModal',
 		    type: 'inline'
@@ -20,22 +20,21 @@ function getRequest(url, callback) {
 
 }
 
-function setCity() {
-    console.log('this: ',this);          
+function setCity() {            
     selectedCity = this.city.name_ru;
-    console.log(selectedCity);
+    // console.log(selectedCity);
     $('#city-link').html(selectedCity + ', ');    
     getPrice(selectedCity);
 }
 
 function setCities() {
     cities = this;
-    console.log('Cities: ',this);
+    // console.log('Cities: ',this);
     getCityList();
 }
 
 function setPrice() {
-    console.log(this.tarif)
+    // console.log(this.tarif)
     let tarif =this.tarif;
     if (tarif) {
         $('#city-price').html(', ' + tarif + 'р.');
@@ -86,7 +85,7 @@ jQuery(document).ready(($) => {
 
     $("#cityModal").on("click", "li", function(){        
         selectedCity = $(this).text()
-        console.log(selectedCity);
+        // console.log(selectedCity);
         $.fancybox.close('#cityModal');
         $('#city-link').html(selectedCity + ', ');
         getPrice(selectedCity);               

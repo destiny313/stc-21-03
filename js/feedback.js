@@ -30,7 +30,7 @@ function sendFeedback() {
       .then(data => data.json())
           .then(data => {
               if (data.success) {
-                console.log(data.body);
+                // console.log(data.body);
                 clearFeedbackField();    
               }
               else {
